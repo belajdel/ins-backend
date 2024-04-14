@@ -17,7 +17,7 @@ import os from "os";
 
 let app = express();
 dotenv.config();
-const allowedDomains = ["http://91.107.215.29","http://91.107.215.29:4200","http://localhost:4200","http://localhost:49438","http://localhost:64288"];
+const allowedDomains = ["http://91.107.215.29","http://91.107.215.29:4200","http://localhost:4200","localhost","http://localhost:49438","http://localhost:64288"];
 const corsOptions = {
   origin: allowedDomains,
   credentials: true,
