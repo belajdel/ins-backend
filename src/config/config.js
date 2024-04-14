@@ -4,13 +4,13 @@ dotenv.config();
 
 export default {
     development: {
-        username: process.env.DEV_DB_USERNAME,
-        password: process.env.DEV_DB_PASSWORD,
-        database: process.env.DEV_DB_DATABASE,
-        host: process.env.DEV_DB_HOST,
-        port: process.env.DEV_DB_PORT,
-        dialect: process.env.DEV_DB_DIALECT,
-        logging: process.env.DEV_DB_LOGGING,
+        username: process.env.PROD_DB_USERNAME,
+        password: process.env.PROD_DB_PASSWORD,
+        database: process.env.PROD_DB_DATABASE,
+        host: process.env.PROD_DB_HOST,
+        port: process.env.PROD_DB_PORT,
+        dialect: process.env.PROD_DB_DIALECT,
+        logging: process.env.PROD_DB_LOGGING,
         migrationStorageTableName: "migrations"
     },
     production: {
