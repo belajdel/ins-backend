@@ -1,0 +1,145 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('assets/facture sante personne.svg');
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: center center;
+            width: 100vw;
+            height: 100vh;
+        }
+        #id{
+            position: absolute;
+            top :14%;
+            right:22.5%;
+        }
+        #bureau{
+            position: absolute;
+            top :18%;
+            right:22.5%;
+        }
+        #today{
+            position: absolute;
+            top :21.5%;
+            right:22.5%;
+        }
+        #startDate{
+            position: absolute;
+            top :37%;
+            right:21%;
+        }
+        #endDate{
+            position: absolute;
+            top :37%;
+            right:47%;
+        }
+        #name{
+            position: absolute;
+            top :37%;
+            right:79%;
+        }
+        #address{
+            position: absolute;
+            top :42%;
+            right:23%;
+        }
+        #numero_tele{
+            position: absolute;
+            top :42.4%;
+            right:73%;
+        }
+        #job{
+            position: absolute;
+            top :48.8%;
+            right:18%;
+        }
+        #numero_passport{
+            position: absolute;
+            top :48.8%;
+            right:71%;
+        }
+        #initiale{
+            position: absolute;
+            top :62.8%;
+            left:59.8%;
+        }
+        /*.id1{
+            position: absolute;
+            top :62.8%;
+            left:59.8%;
+        }*/
+        #taxe1{
+            position: absolute;
+            top :66.8%;
+            left:59.8%;
+        }
+        #taxe2{
+            position: absolute;
+            top :70.8%;
+            left:59.8%;
+        }
+        #taxe3{
+            position: absolute;
+            top :74.8%;
+            left:59.8%;
+        }
+        #taxe4{
+            position: absolute;
+            top :78.8%;
+            left:59.8%;
+        }
+        #total{
+            position: absolute;
+            top :82.8%;
+            left:59.8%;
+            font-weight: bolder;
+        }
+    </style>
+    <title>assurance sante personne</title>
+</head>
+<body>
+<p id="id"></p>
+<p id="bureau"></p>
+<p id="today"></p>
+<p id="startDate"></p>
+<p id="endDate"></p>
+<p id="name"></p>
+<p id="address"></p>
+<p id="numero_tele"></p>
+<p id="job"></p>
+<p id="numero_passport"></p>
+<p id="initiale"></p>
+<p id="taxe1"></p>
+<p id="taxe2"></p>
+<p id="taxe3"></p>
+<p id="taxe4"></p>
+<p id="total"></p>
+</body>
+
+<script>
+    // Function to parse query parameters from URL
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, '\\$&');
+        console.log(name);
+        const regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)');
+        const results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, ' '));
+    }
+
+    // Retrieve query parameters and set data in HTML elements
+    const contents=document.getElementsByTagName('p')
+    for (let i = 0; i < contents.length; i++) {
+        const value = getParameterByName(contents[i].id);
+        contents[i].innerText = value || 'No Value';
+    }
+</script>
+</html>
