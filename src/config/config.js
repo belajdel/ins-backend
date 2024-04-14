@@ -13,7 +13,7 @@ export default {
         logging: process.env.PROD_DB_LOGGING,
         migrationStorageTableName: "migrations"
     },
-    test: {
+    production: {
         username: process.env.TEST_TEST_DB_USERNAME,
         password: process.env.TEST_DB_PASSWORD,
         database: process.env.TEST_DB_DATABASE,
@@ -23,7 +23,7 @@ export default {
         logging: process.env.TEST_DB_LOGGING,
         migrationStorageTableName: "migrations"
     },
-    production: {
+    test: {
         username: process.env.PROD_DB_USERNAME,
         password: process.env.PROD_DB_PASSWORD,
         database: process.env.PROD_DB_DATABASE,
